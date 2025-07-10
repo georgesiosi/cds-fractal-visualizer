@@ -149,7 +149,8 @@ const FractalCanvas: React.FC<FractalCanvasProps> = ({
       ref={canvasRef}
       width={width}
       height={height}
-      className="border border-gray-300 rounded-lg shadow-lg cursor-crosshair"
+      className="border border-gray-300 rounded-lg shadow-lg cursor-crosshair w-full h-auto max-w-full"
+      style={{ aspectRatio: `${width}/${height}` }}
     />
   );
 };

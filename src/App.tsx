@@ -95,7 +95,7 @@ function App() {
 
         <div className="grid grid-cols-1 xl:grid-cols-3 gap-8">
           <div className="xl:col-span-2">
-            <div className="bg-white p-6 rounded-lg shadow-2xl">
+            <div className="bg-white p-4 rounded-lg shadow-2xl overflow-hidden">
               <FractalCanvas
                 width={800}
                 height={600}
