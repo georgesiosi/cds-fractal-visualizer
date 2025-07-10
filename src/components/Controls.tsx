@@ -160,6 +160,7 @@ const Controls: React.FC<ControlsProps> = ({
           }
         </div>
       </div>
+    </div>
   );
 };
 
