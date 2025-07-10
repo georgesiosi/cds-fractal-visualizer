@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from 'react';
 import FractalCanvas from './components/FractalCanvas';
 import Controls from './components/Controls';
 import PresetButtons from './components/PresetButtons';
+import Footer from './components/Footer';
+import AboutModal from './components/AboutModal';
 import { Calculator, Info } from 'lucide-react';
 
 function App() {
@@ -14,6 +16,7 @@ function App() {
   const [colorScheme, setColorScheme] = useState('classic');
   const [isAnimating, setIsAnimating] = useState(false);
   const [showInfo, setShowInfo] = useState(false);
+  const [showAboutModal, setShowAboutModal] = useState(false);
 
   const handleReset = useCallback(() => {
     setRealPart(0);
@@ -35,6 +38,14 @@ function App() {
   const handleToggleAnimation = useCallback(() => {
     setIsAnimating(!isAnimating);
   }, [isAnimating]);
+
+  const handleAboutClick = useCallback(() => {
+    setShowAboutModal(true);
+  }, []);
+
+  const handleCloseAboutModal = useCallback(() => {
+    setShowAboutModal(false);
+  }, []);
 
   // Animation effect
   useEffect(() => {
@@ -123,7 +134,14 @@ function App() {
         <div className="mt-8 text-center text-gray-400 text-sm">
           <p>Tip: Try different presets to see various Julia sets, or set both parts to 0 for the classic Mandelbrot set.</p>
         </div>
+
+        <AboutModal 
+          isOpen={showAboutModal} 
+          onClose={handleCloseAboutModal} 
+        />
       </div>
+      
+      <Footer onAboutClick={handleAboutClick} />
     </div>
   );
 }
