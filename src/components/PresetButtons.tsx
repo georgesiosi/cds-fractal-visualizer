@@ -41,6 +41,7 @@ const PresetButtons: React.FC<PresetButtonsProps> = ({ onPresetSelect }) => {
           </button>
         ))}
       </div>
+    </div>
   );
 };
 
