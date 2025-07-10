@@ -18,10 +18,9 @@ const PresetButtons: React.FC<PresetButtonsProps> = ({ onPresetSelect }) => {
   ];
 
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg">
+    <div>
       <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-        <Sparkles className="mr-2" size={20} />
-        Fractal Presets
+        Explore Beautiful Fractals
       </h3>
       <div className="grid grid-cols-2 gap-3">
         {presets.map((preset, index) => (
@@ -42,7 +41,6 @@ const PresetButtons: React.FC<PresetButtonsProps> = ({ onPresetSelect }) => {
           </button>
         ))}
       </div>
-    </div>
   );
 };
 

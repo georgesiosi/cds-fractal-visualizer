@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import FractalCanvas from './components/FractalCanvas';
-import Controls from './components/Controls';
-import PresetButtons from './components/PresetButtons';
+import ControlPanel from './components/ControlPanel';
 import Footer from './components/Footer';
 import AboutModal from './components/AboutModal';
 import { Calculator, Info } from 'lucide-react';
@@ -111,7 +110,7 @@ function App() {
           </div>
 
           <div className="space-y-6">
-            <Controls
+            <ControlPanel
               realPart={realPart}
               imagPart={imagPart}
               maxIterations={maxIterations}
@@ -125,9 +124,8 @@ function App() {
               onColorSchemeChange={setColorScheme}
               onReset={handleReset}
               onToggleAnimation={handleToggleAnimation}
+              onPresetSelect={handlePresetSelect}
             />
-
-            <PresetButtons onPresetSelect={handlePresetSelect} />
           </div>
         </div>
 

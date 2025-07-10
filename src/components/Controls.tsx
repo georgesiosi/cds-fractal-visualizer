@@ -33,9 +33,9 @@ const Controls: React.FC<ControlsProps> = ({
   onToggleAnimation,
 }) => {
   return (
-    <div className="bg-white p-6 rounded-lg shadow-lg space-y-6">
+    <div className="space-y-6">
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-gray-800">Fractal Parameters</h3>
+        <h3 className="text-lg font-semibold text-gray-800">Control Settings</h3>
         <div className="flex space-x-2">
           <button
             onClick={onToggleAnimation}
@@ -160,7 +160,6 @@ const Controls: React.FC<ControlsProps> = ({
           }
         </div>
       </div>
-    </div>
   );
 };
 
