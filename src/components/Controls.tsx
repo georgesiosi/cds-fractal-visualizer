@@ -165,5 +165,3 @@ const Controls: React.FC<ControlsProps> = ({
 };
 
 export default Controls;
-  )
-}
